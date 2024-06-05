@@ -61,8 +61,6 @@ if file_upload is not None:
 
     img_data = file_upload
 
-
-
     ocr_transcription(img_data)
 
 
