@@ -23,7 +23,7 @@ def key():
     return key
 
 def endpoint():
-    endpoint = st.secrets["key"]
+    endpoint = st.secrets["endpoint"]
 
     print(endpoint)
     return endpoint
