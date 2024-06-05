@@ -56,15 +56,15 @@ st.write('Upload a pdf handwritten or text.')
 
 file_upload = st.file_uploader('Choose your file', type="pdf")
 
-# if file_upload is not None:
-#     print(file_upload)
+if file_upload is not None:
+    print(file_upload)
 
-img_data = file_upload
-    
+    img_data = file_upload
 
 
-ocr_transcription(img_data)
-    
+
+    ocr_transcription(img_data)
+
 
 
 # st.write(file_upload)
