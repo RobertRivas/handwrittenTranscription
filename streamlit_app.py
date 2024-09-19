@@ -8,7 +8,11 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 
-import utils.ocr.ocr as tr
+
+key = st.secrets["key"]
+print(key)
+endpoint = st.secrets["endpoint"]
+print(endpoint)
 
 # import utils.llm.llm as lm
 def ocr_transcription(file):
@@ -19,8 +23,8 @@ def ocr_transcription(file):
     print(type(read_image))
 
     # Call API with URL and raw response (allows you to get the operation location). Call Azure using computervision_client with the URL.
-    read_response = computervision_client.read_in_stream(read_image, pages=['1,2,3,4,5,6,7,8'], raw=True)
-
+    read_response = computervision_client.read_in_stream(read_image, pages=["1 - 8"], raw=True)
+    print(read_response)
     # # <snippet_read_response>
     # # Get the operation location (URL with an ID at the end) from the response
     read_operation_location = read_response.headers["Operation-Location"]
@@ -50,11 +54,7 @@ def ocr_transcription(file):
 
 
 
-st.write('Upload a pdf handwritten or text.')
-
-# lm.llm_function()
-
-file_upload = st.file_uploader('Choose your file', type="pdf")
+file_upload = st.file_uploader('Upload a pdf handwritten or text.', type="pdf", key="1")
 
 if file_upload is not None:
     print(file_upload)
@@ -63,9 +63,6 @@ if file_upload is not None:
 
     ocr_transcription(img_data)
 
-
-
-# st.write(file_upload)
 
 
 
