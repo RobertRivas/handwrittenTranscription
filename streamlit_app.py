@@ -23,7 +23,7 @@ def ocr_transcription(file):
     print(type(read_image))
 
     # Call API with URL and raw response (allows you to get the operation location). Call Azure using computervision_client with the URL.
-    read_response = computervision_client.read_in_stream(read_image, pages=["1 - 8"], raw=True)
+    read_response = computervision_client.read_in_stream(read_image, raw=True)
     print(read_response)
     # # <snippet_read_response>
     # # Get the operation location (URL with an ID at the end) from the response
