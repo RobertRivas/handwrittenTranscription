@@ -121,7 +121,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## 📧 Contact
 
 For any inquiries or feedback, reach out at:
-- **Email**: robertrivas@example.com (replace with your contact info)
+- **Email**: robrrivas@gmail.com
 - **GitHub**: [RobertRivas](https://github.com/RobertRivas)
 
 ---
